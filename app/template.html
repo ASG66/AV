@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://static.freshdev.io/fdk/2.0/assets/freshdesk.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+
+<div class="nav-bar-top">
+  <button class="schcall-button" onclick="openWidget('schcall')">Scheduled Calls</button>
+  <button class="tkt-button" onclick="openWidget('tkt')">Tickets</button>
+</div>
+
+<div id="schcall" class="schcall page" style="float:left">
+  <br>
+  <br>
+  <p>Scheduled Calls</p>
+</div>
+
+<div id="tkt" class="tkt page" style="display:none">
+  <br>
+  <br>
+  <p>Tickets</p>
+</div>
+
+<div class="filters-right">
+  <br>
+<p>Filters</p>
+</div>
+
+<script>
+function openWidget(page) {
+  var i;
+  var x = document.getElementsByClassName("page");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(page).style.display = "block";
+}
+</script>
+
+
+  </body>
+</html>
+
+<style>
+.filters-right
+{
+
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 30px;
+  right: 20px;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+</style>
